@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Youtube Android BA</string>
+    <string name="lbl_cancel">Cancel</string>
+    <string name="lbl_ok">OK</string>
+    <string name="lbl_confirm">Confirm</string>
+    <string name="lbl_save">Save</string>
+    <string name="lbl_delete">Delete</string>
+    <string name="lbl_edit">Edit</string>
+    <string name="lbl_close">Close</string>
+    <string name="lbl_retry">Retry</string>
+    <string name="lbl_loading">Loading…</string>
+    <string name="lbl_error_generic">Something went wrong. Please try again.</string>
+</resources>

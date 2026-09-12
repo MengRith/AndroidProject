@@ -1,0 +1,33 @@
+package kh.com.mereanandroidyoutube.basictoadvance.feature.button
+
+enum class TransactionType(val id: String, val type: String) {
+    TRANSFER("02", "Transfer"),
+    KHQR("05", "KHQR"),
+    MOBILE_TOPUP("07", "TopUp"),
+    BILL_PAYMENT("08", "Payment"),
+    BANKING("01", "Banking"),
+    LOCAL_TRANSFER("03", "Local Transfer"),
+    INTERNATIONAL_TRANSFER("04", "International Transfer"),
+    QR_PAYMENT("06", "QR Payment"),
+    DEBIT_CARD("10", "Debit Card"),
+    CREDIT_CARD("11", "Credit Card"),
+    ATM_WITHDRAW("12", "ATM Withdraw"),
+    CASH_DEPOSIT("13", "Cash Deposit"),
+    ABA_TRANSFER("14", "ABA Transfer"),
+    ACLEDA_TRANSFER("15", "ACLEDA Transfer"),
+    CHIPMONG_TRANSFER("16", "Chip Mong Transfer"),
+    WING_TRANSFER("17", "Wing Transfer"),
+    TRUE_MONEY("18", "TrueMoney"),
+    MERCHANT_PAYMENT("19", "Merchant Payment"),
+    POS_PAYMENT("20", "POS Payment"),
+    FOOD_ORDER("21", "Food Order"),
+    SHOPPING("22", "Shopping"),
+    ELECTRICITY("23", "Electricity"),
+    WATER("24", "Water Supply"),
+    INTERNET("25", "Internet"),
+    TV_SUBSCRIPTION("26", "TV Subscription"),
+    SCHOOL_FEE("27", "School Fee"),
+    TAX_PAYMENT("28", "Tax Payment"),
+    GOVERNMENT_SERVICE("29", "Government Service"),
+    BOOKING_RIDE("30", "Ride Booking")
+}
