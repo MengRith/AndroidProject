@@ -22,6 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Merean Android(Youtube"
+rootProject.name = "MereanAndroid(Youtube)"
 include(":app")
  
