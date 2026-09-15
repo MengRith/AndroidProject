@@ -10,6 +10,7 @@ import kh.com.mereanandroidyoutube.basictoadvance.feature.scaffold.ScaffoldExamp
 import kh.com.mereanandroidyoutube.basictoadvance.feature.snackbar.ScreenSnackBar
 import kh.com.mereanandroidyoutube.basictoadvance.feature.switchcomponent.ScreenSwitchComponent
 import kh.com.mereanandroidyoutube.basictoadvance.feature.tab.ScreenTab
+import kh.com.mereanandroidyoutube.basictoadvance.feature.textfield.ScreenTextField
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 
 class MainActivity : ComponentActivity() {
@@ -48,8 +49,8 @@ class MainActivity : ComponentActivity() {
 //                ScreenSlider {  }
 //                ScreenSnackBar {  }
 //                ScreenSwitchComponent {  }
-                ScreenTab {  }
-
+//                ScreenTab {  }
+                ScreenTextField {  }
             }
         }
     }
