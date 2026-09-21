@@ -57,12 +57,14 @@ import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Red40
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 import kotlinx.coroutines.launch
 
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
 fun ScreenNavigationDrawer(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     val scope = rememberCoroutineScope()
@@ -306,6 +308,15 @@ fun MainContent(
 @Composable
 fun ScreenNavigationDrawerPreview(){
     AppTheme() {
-        ScreenNavigationDrawer {  }
+        ScreenNavigationDrawer (
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack= {}
+        )
     }
 }

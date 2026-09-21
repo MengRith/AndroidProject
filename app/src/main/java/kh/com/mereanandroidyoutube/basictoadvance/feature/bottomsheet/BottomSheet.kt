@@ -35,10 +35,12 @@ import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.feature.radio.OrderSection
 import kh.com.mereanandroidyoutube.basictoadvance.feature.radio.RadioModel
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenBottomSheet(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ) {
     var sheetState = rememberModalBottomSheetState(
@@ -179,6 +181,15 @@ fun ScreenBottomSheet(
 @Composable
 fun ScreenBottomSheetPreview(){
     AppTheme() {
-        ScreenBottomSheet {  }
+        ScreenBottomSheet (
+            item = MaterialComponentModel(
+                1,
+                "Button",
+                "Button description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

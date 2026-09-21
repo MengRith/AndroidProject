@@ -21,10 +21,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenBadge(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     Scaffold(
@@ -103,6 +105,13 @@ fun ScreenBadge(
 fun ScreenBadgePreview(){
     AppTheme() {
         ScreenBadge(
+            item = MaterialComponentModel(
+                1,
+                "Button",
+                "Button description",
+                { "" },
+                ""
+            ),
             onBack = {}
         )
     }

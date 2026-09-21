@@ -6,16 +6,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
-import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.ElevatedButton
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
-import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
-import kh.com.mereanandroidyoutube.basictoadvance.R
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
@@ -23,28 +19,28 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material3.OutlinedButton
-import kh.com.mereanandroidyoutube.basictoadvance.feature.lazyrow.MaterialComponentModal
+import kh.com.mereanandroidyoutube.basictoadvance.R
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Amber40
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Orange80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Red80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.RedGrey80
-import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Teal80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Yellow80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.YellowGrey40
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenButton(
-    item: MaterialComponentModal,
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     Scaffold(
@@ -173,7 +169,7 @@ fun ScreenButton(
 fun ScreenButtonPreview(){
     AppTheme() {
         ScreenButton(
-            item = MaterialComponentModal(
+            item = MaterialComponentModel(
                 1,
                 "Button",
                 "Button description",

@@ -33,10 +33,14 @@ import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScaffoldColumnExample(){
+fun ScreenColumn(
+    item: MaterialComponentModel,
+    onBack: () -> Unit
+){
     var pressed by remember { mutableIntStateOf(0) }
     Scaffold(
         topBar = {
@@ -113,6 +117,15 @@ fun ScaffoldColumnExample(){
 @Composable
 fun AppPreview(){
     AppTheme {
-        ScaffoldColumnExample()
+        ScreenColumn(
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

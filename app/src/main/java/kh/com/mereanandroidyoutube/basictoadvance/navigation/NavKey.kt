@@ -1,0 +1,67 @@
+package kh.com.mereanandroidyoutube.basictoadvance.navigation
+
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kotlinx.serialization.Serializable
+
+
+
+object NavKey {
+    data object Home
+    data class Badge(val data: MaterialComponentModel)
+    data class BottomSheet(val data: MaterialComponentModel)
+    data class Buttons(val data: MaterialComponentModel)
+    data class Cards(val data: MaterialComponentModel)
+    data class Carousel(val data: MaterialComponentModel)
+    data class CheckBox(val data: MaterialComponentModel)
+    data class Chip(val data: MaterialComponentModel)
+    data class ColumnScreen(val data: MaterialComponentModel)
+    data class DatePicker(val data: MaterialComponentModel)
+    data class Dialog(val data: MaterialComponentModel)
+    data class FullScreenDialog(val data: MaterialComponentModel)
+    data class ElevatedButton(val data: MaterialComponentModel)
+    data class FilledTonalButton(val data: MaterialComponentModel)
+    data class IconButton(val data: MaterialComponentModel)
+    data class ScreenLazyColumn (val data: MaterialComponentModel)
+    data class LazyRowScreen(val data: MaterialComponentModel)
+    data class Menu(val data: MaterialComponentModel)
+    data class BottomNavigationBar(val data: MaterialComponentModel)
+    data class NavigationDrawer(val data: MaterialComponentModel)
+    data class OutlineButton(val data: MaterialComponentModel)
+    data class ProgressIndicator(val data: MaterialComponentModel)
+    data class Radio(val data: MaterialComponentModel)
+    data class RowScreen(val data: MaterialComponentModel)
+    data class ScaffoldScreen(val data: MaterialComponentModel)
+    data class MultiChoiceSegmentButton(val data: MaterialComponentModel)
+    data class SingleChoiceSegmentedButton(val data: MaterialComponentModel)
+    data class Slider(val data: MaterialComponentModel)
+    data class SnackBar(val data: MaterialComponentModel)
+    data class SpacerScreen(val data: MaterialComponentModel)
+    data class Switch(val data: MaterialComponentModel)
+    data class Tabs(val data: MaterialComponentModel)
+    data class TextButton(val data: MaterialComponentModel)
+    data class TextField(val data: MaterialComponentModel)
+    data class TimePicker(val data: MaterialComponentModel)
+    data class Toolbar(val data: MaterialComponentModel)
+    data class ToolTips(val data: MaterialComponentModel)
+    data class BoxScreen(val data: MaterialComponentModel)
+    data class TopAppBarScreen(val data: MaterialComponentModel)
+
+    data class StateViewModelScreen(val data: MaterialComponentModel)
+
+    /**
+     * Request API
+     */
+//    data class UserApiScreen(val data: MaterialComponentModel)
+//
+//    data class UserDetailScreen(val id: Int)
+//
+//    data class CreateUserScreen(val data: UserModelResponse?)
+//
+//    data class TaskScreen(val data: MaterialComponentModel)
+//
+//    data class CreateUpdateTaskScreen(val task: TaskModel? = null)
+//
+//    data class TaskDetailScreen(val id: String)
+
+    data class NotificationList(val title: String)
+}

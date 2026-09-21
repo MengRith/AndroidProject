@@ -31,10 +31,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScreenBox() {
+fun ScreenBox(
+    item: MaterialComponentModel,
+    onBack: () -> Unit
+) {
     var pressed by remember { mutableIntStateOf(0) }
     Scaffold(
         topBar = {
@@ -111,6 +115,15 @@ fun ScreenBox() {
 @Preview(showBackground = true)
 fun ScreenBoxPreview(){
     AppTheme() {
-        ScreenBox()
+        ScreenBox(
+            item = MaterialComponentModel(
+                1,
+                "Scaffold",
+                "Scaffold description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

@@ -36,15 +36,19 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.test.isSelected
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material3.RadioButton
 import kh.com.mereanandroidyoutube.basictoadvance.R
-
+import kh.com.mereanandroidyoutube.basictoadvance.feature.navigationbar.ScreenNavigationBar
+import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenRadio(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     val scrollState = rememberScrollState()
@@ -273,3 +277,19 @@ fun Option(
 data class RadioModel(
     val label: String,
 )
+@Preview(showBackground = true)
+@Composable
+fun ScreenRadioPreview(){
+    AppTheme() {
+        ScreenRadio (
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack= {}
+        )
+    }
+}

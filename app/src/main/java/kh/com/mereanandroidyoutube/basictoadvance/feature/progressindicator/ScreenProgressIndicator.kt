@@ -41,6 +41,7 @@ import androidx.compose.ui.window.DialogProperties
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Violet80
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -49,6 +50,7 @@ import kotlin.time.Duration.Companion.milliseconds
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenProgressIndicator(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ) {
     val scope = rememberCoroutineScope()
@@ -185,6 +187,15 @@ fun ScreenProgressIndicator(
     @Composable
     fun ScreenProgressIndicatorPreview() {
         AppTheme() {
-            ScreenProgressIndicator { }
+            ScreenProgressIndicator (
+                item = MaterialComponentModel(
+                    1,
+                    "Chip",
+                    "Chip description",
+                    { "" },
+                    ""
+                ),
+                onBack= {}
+            )
         }
     }

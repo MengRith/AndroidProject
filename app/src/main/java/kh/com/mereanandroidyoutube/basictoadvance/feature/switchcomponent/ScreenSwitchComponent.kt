@@ -28,11 +28,13 @@ import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenSwitchComponent(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ) {
     var isEnableNotification by remember { mutableStateOf(false) }
@@ -132,6 +134,15 @@ fun ScreenSwitchComponent(
 @Composable
 fun ScreenSwitchComponentPreview(){
     AppTheme() {
-        ScreenSwitchComponent { }
+        ScreenSwitchComponent (
+            item = MaterialComponentModel(
+                1,
+                "Scaffold",
+                "Scaffold description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

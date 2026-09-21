@@ -1,19 +1,13 @@
 package kh.com.mereanandroidyoutube.basictoadvance.feature.chip
 
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.material3.Checkbox
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FilterChip
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
@@ -23,29 +17,24 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-
-import androidx.compose.material3.Text
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.setValue
-import kh.com.mereanandroidyoutube.basictoadvance.feature.checkbox.ScreenCheckBox
-import kh.com.mereanandroidyoutube.basictoadvance.feature.lazyrow.MaterialComponentModal
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenChip(
-//    item: MaterialComponentModal,
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ) {
     data class ChipItem(
@@ -192,13 +181,14 @@ fun ScreenChip(
 fun ScreenChipPreview(){
     AppTheme() {
         ScreenChip(
-//            item = MaterialComponentModal(
-//                1,
-//                "Chip",
-//                "Chip description",
-//                { "" },
-//                ""
-//            )
-        ){}
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

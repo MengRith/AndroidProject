@@ -36,11 +36,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 import kotlin.math.roundToInt
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenSlider(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ) {
     val sliderState = rememberSliderState(value = 0f)
@@ -194,6 +196,15 @@ fun ScreenSlider(
 @Composable
 fun ScreenSliderPreview() {
     AppTheme() {
-        ScreenSlider { }
+        ScreenSlider (
+            item = MaterialComponentModel(
+                1,
+                "Scaffold",
+                "Scaffold description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

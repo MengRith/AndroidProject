@@ -31,11 +31,15 @@ import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Arrangement
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScreenRow(){
+fun ScreenRow(
+    item: MaterialComponentModel,
+    onBack: () -> Unit
+){
     var pressed by remember { mutableIntStateOf(0) }
     Scaffold(
         topBar = {
@@ -103,6 +107,15 @@ fun ScreenRow(){
 @Preview(showBackground = true)
 fun ScreenRowPreview(){
     AppTheme() {
-        ScreenRow()
+        ScreenRow(
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack= {}
+        )
     }
 }

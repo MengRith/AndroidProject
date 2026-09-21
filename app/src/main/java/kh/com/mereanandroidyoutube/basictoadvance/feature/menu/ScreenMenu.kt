@@ -35,10 +35,12 @@ import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Cyan80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.GreenGrey80
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenMenu(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     val context = LocalContext.current
@@ -204,6 +206,15 @@ fun ScreenMenu(
 @Composable
 fun ScreenMenuPreview(){
     AppTheme() {
-        ScreenMenu {  }
+        ScreenMenu(
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack= {}
+        )
     }
 }

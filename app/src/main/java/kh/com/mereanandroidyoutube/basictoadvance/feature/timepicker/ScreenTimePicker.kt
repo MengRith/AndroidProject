@@ -41,10 +41,12 @@ import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Indigo80
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenTimePicker(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     val calendar = Calendar.getInstance()
@@ -176,6 +178,15 @@ fun ScreenTimePicker(
 @Composable
 fun ScreenTimePickerPreview(){
     AppTheme() {
-        ScreenTimePicker {  }
+        ScreenTimePicker (
+            item = MaterialComponentModel(
+                1,
+                "Scaffold",
+                "Scaffold description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

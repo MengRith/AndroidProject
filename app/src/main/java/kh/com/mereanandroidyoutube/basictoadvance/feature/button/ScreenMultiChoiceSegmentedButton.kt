@@ -29,10 +29,12 @@ import androidx.compose.ui.unit.dp
 import androidx.wear.compose.material3.IconButton
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MultiChoiceSegmentedButton(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     val selects = remember {
@@ -117,6 +119,14 @@ fun MultiChoiceSegmentedButton(
 @Composable
 fun MultiChoiceSegmentButtonPreview(){
     AppTheme() {
-        MultiChoiceSegmentedButton ( onBack = {} )
+        MultiChoiceSegmentedButton (
+            item = MaterialComponentModel(
+                1,
+                "Scaffold",
+                "Scaffold description",
+                { "" },
+                ""
+            ),
+            onBack = {} )
     }
 }

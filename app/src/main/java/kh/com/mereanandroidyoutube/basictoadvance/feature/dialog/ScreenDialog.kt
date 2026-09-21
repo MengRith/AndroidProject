@@ -34,10 +34,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenDialog(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     val context = LocalContext.current
@@ -149,6 +151,15 @@ fun ScreenDialog(
 @Composable
 fun ScreenDialogPreview(){
     AppTheme() {
-        ScreenDialog { }
+        ScreenDialog(
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

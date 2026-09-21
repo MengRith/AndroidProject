@@ -35,10 +35,12 @@ import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenCheckBox(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     data class CheckBoxItem(
@@ -187,6 +189,15 @@ fun ScreenCheckBox(
 @Composable
 fun ScreenCheckBoxPreview(){
     AppTheme() {
-        ScreenCheckBox {  }
+        ScreenCheckBox (
+            item = MaterialComponentModel(
+                1,
+                "Button",
+                "Button description",
+                { "" },
+                ""
+            ),
+            onBack = { }
+        )
     }
 }

@@ -19,10 +19,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ScreenCard(){
+fun ScreenCard(
+    item: MaterialComponentModel,
+    onBack: () -> Unit
+){
     Scaffold(
         topBar = {
             TopAppBar(
@@ -67,6 +70,15 @@ fun ScreenCard(){
 @Composable
 fun ScreenCardPreview(){
     AppTheme() {
-        ScreenCard()
+        ScreenCard(
+            item = MaterialComponentModel(
+                1,
+                "Button",
+                "Button description",
+                { "" },
+                ""
+            ),
+            onBack = {}
+        )
     }
 }

@@ -29,12 +29,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Build
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenLazyColumn(
-    item: MaterialComponentModal,
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
 
@@ -110,13 +111,6 @@ fun ItemLazyColumn(index: Int, item: String) {
     }
 }
 
-data class MaterialComponentModal(
-    val id: Int,
-    val title: String,
-    val description: String,
-    val onClick: () -> String,
-    val icon: String
-)
 
 
 @Composable
@@ -124,7 +118,7 @@ data class MaterialComponentModal(
 fun LazyColumnPreview(){
     AppTheme() {
         ScreenLazyColumn(
-            item = MaterialComponentModal(
+            item = MaterialComponentModel(
                 1,
                 "Lazy Column",
                 "Lazy Column description",

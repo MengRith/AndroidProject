@@ -30,10 +30,12 @@ import androidx.wear.compose.material3.OpenOnPhoneDialogDefaults.text
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.feature.menu.ScreenMenu
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
 fun ScreenNavigationBar(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     var selectIndex by remember { mutableIntStateOf(0) }
@@ -142,6 +144,15 @@ fun ScreenNavigationBar(
 @Composable
 fun NavigationBarPreview(){
     AppTheme() {
-        ScreenNavigationBar {  }
+        ScreenNavigationBar (
+            item = MaterialComponentModel(
+                1,
+                "Chip",
+                "Chip description",
+                { "" },
+                ""
+            ),
+            onBack= {}
+        )
     }
 }

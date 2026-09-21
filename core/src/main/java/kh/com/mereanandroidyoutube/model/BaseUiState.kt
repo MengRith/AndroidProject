@@ -1,0 +1,25 @@
+package kh.com.mereanandroidyoutube.model
+
+sealed interface BaseUiState<out T> {
+
+    data object None : BaseUiState<Nothing>
+
+    data object Loading : BaseUiState<Nothing>
+
+    data class Success<T>(
+        val data: T
+    ) : BaseUiState<T>
+
+    data class Failure(
+        val code: String? = null,
+        val message: String
+    ) : BaseUiState<Nothing>
+
+    data class Exception(
+        val code: String? = null,
+        val message: String? = null,
+        val throwable: Throwable
+    ) : BaseUiState<Nothing>
+
+    data object Empty : BaseUiState<Nothing>
+}

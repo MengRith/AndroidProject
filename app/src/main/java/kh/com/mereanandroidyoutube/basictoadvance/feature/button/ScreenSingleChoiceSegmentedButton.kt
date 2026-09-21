@@ -30,10 +30,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.R
+import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SingleChoiceSegmentedButton(
+    item: MaterialComponentModel,
     onBack: () -> Unit
 ){
     var selectedIndex by remember { mutableIntStateOf(0) }
@@ -127,6 +129,13 @@ fun SingleChoiceSegmentedButton(
 fun SingleChoiceSegmentedPreview(){
     AppTheme() {
         SingleChoiceSegmentedButton(
+            item = MaterialComponentModel(
+                1,
+                "Scaffold",
+                "Scaffold description",
+                { "" },
+                ""
+            ),
             onBack = {}
         )
     }
