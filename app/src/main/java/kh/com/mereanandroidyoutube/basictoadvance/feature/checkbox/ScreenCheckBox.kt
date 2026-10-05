@@ -35,7 +35,7 @@ import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

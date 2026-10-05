@@ -41,7 +41,7 @@ import androidx.compose.ui.window.DialogProperties
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Violet80
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch

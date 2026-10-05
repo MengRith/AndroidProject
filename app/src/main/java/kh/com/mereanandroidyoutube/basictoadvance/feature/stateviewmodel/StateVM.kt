@@ -2,12 +2,12 @@ package kh.com.mereanandroidyoutube.basictoadvance.feature.stateviewmodel
 
 import androidx.compose.runtime.Stable
 import androidx.lifecycle.ViewModel
-import kh.com.mereanandroidyoutube.model.general.UserModel
+import kh.com.exercise.model.general.UserModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 
 @Stable
-class StateVM() : ViewModel() {
+class StateVM : ViewModel() {
     private var _userListUiState = MutableStateFlow<MutableList<UserModel>>(mutableListOf())
     val userListUiState = _userListUiState.asStateFlow()
 
@@ -15,6 +15,7 @@ class StateVM() : ViewModel() {
         val list = _userListUiState.value + mutableListOf(user)
         _userListUiState.value = list.toMutableList()
     }
+
     fun delete(user: UserModel) {
         _userListUiState.value = _userListUiState.value.filter { it != user }.toMutableList()
     }

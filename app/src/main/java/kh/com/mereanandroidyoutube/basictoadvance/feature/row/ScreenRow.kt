@@ -31,7 +31,7 @@ import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Arrangement
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)

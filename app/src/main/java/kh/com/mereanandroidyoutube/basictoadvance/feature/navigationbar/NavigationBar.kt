@@ -1,6 +1,5 @@
 package kh.com.mereanandroidyoutube.basictoadvance.feature.navigationbar
 
-import android.R.attr.text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
@@ -26,11 +25,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.wear.compose.material3.OpenOnPhoneDialogDefaults.text
+import kh.com.exercise.model.general.MaterialComponentModel
 import kh.com.mereanandroidyoutube.basictoadvance.R
-import kh.com.mereanandroidyoutube.basictoadvance.feature.menu.ScreenMenu
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @Composable
 @OptIn(ExperimentalMaterial3Api::class)
@@ -88,7 +85,7 @@ fun ScreenNavigationBar(
                     actionIconContentColor = MaterialTheme.colorScheme.onPrimary
                 ),
                 title = {
-                    Text("Navigation Bar")
+                    Text(item.title)
                 },
             )
         },
@@ -112,7 +109,6 @@ fun ScreenNavigationBar(
                         label = {
                             Text(
                                 text = items.text,
-
                             )
                         }
                     )
@@ -138,21 +134,19 @@ fun ScreenNavigationBar(
     }
 }
 
-
-
 @Preview(showBackground = true)
 @Composable
 fun NavigationBarPreview(){
-    AppTheme() {
-        ScreenNavigationBar (
+    AppTheme {
+        ScreenNavigationBar(
             item = MaterialComponentModel(
                 1,
-                "Chip",
-                "Chip description",
+                "Navigation Bar",
+                "Navigation Bar description",
                 { "" },
                 ""
             ),
-            onBack= {}
+            onBack = {}
         )
     }
 }

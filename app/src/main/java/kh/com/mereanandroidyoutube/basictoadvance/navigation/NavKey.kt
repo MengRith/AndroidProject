@@ -1,9 +1,6 @@
 package kh.com.mereanandroidyoutube.basictoadvance.navigation
 
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
-import kotlinx.serialization.Serializable
-
-
+import kh.com.exercise.model.general.MaterialComponentModel
 
 object NavKey {
     data object Home
@@ -21,7 +18,7 @@ object NavKey {
     data class ElevatedButton(val data: MaterialComponentModel)
     data class FilledTonalButton(val data: MaterialComponentModel)
     data class IconButton(val data: MaterialComponentModel)
-    data class ScreenLazyColumn (val data: MaterialComponentModel)
+    data class ScreenLazyColumn(val data: MaterialComponentModel)
     data class LazyRowScreen(val data: MaterialComponentModel)
     data class Menu(val data: MaterialComponentModel)
     data class BottomNavigationBar(val data: MaterialComponentModel)
@@ -47,21 +44,6 @@ object NavKey {
     data class TopAppBarScreen(val data: MaterialComponentModel)
 
     data class StateViewModelScreen(val data: MaterialComponentModel)
-
-    /**
-     * Request API
-     */
-//    data class UserApiScreen(val data: MaterialComponentModel)
-//
-//    data class UserDetailScreen(val id: Int)
-//
-//    data class CreateUserScreen(val data: UserModelResponse?)
-//
-//    data class TaskScreen(val data: MaterialComponentModel)
-//
-//    data class CreateUpdateTaskScreen(val task: TaskModel? = null)
-//
-//    data class TaskDetailScreen(val id: String)
 
     data class NotificationList(val title: String)
 }

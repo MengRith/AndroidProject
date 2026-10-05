@@ -58,7 +58,6 @@ import kh.com.mereanandroidyoutube.basictoadvance.feature.timepicker.ScreenTimeP
 import kh.com.mereanandroidyoutube.basictoadvance.feature.toolbar.ScreenToolbar
 import kh.com.mereanandroidyoutube.basictoadvance.feature.tooltip.ScreenToolTips
 import kh.com.mereanandroidyoutube.basictoadvance.feature.topappbar.ScreenTopAppBar
-import kh.com.mereanandroidyoutube.model.general.route
 
 
 private const val ANIMATION_DURATION = 300

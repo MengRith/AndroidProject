@@ -25,3 +25,7 @@ dependencyResolutionManagement {
 rootProject.name = "MereanAndroid(Youtube)"
 include(":app")
 include(":core")
+include(":core:data")
+include(":core:domain")
+include(":core:model")
+include(":core:network")

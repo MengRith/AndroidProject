@@ -1,4 +1,4 @@
-package kh.com.mereanandroidyoutube.model.general
+package kh.com.exercise.model.general
 
 data class MaterialComponentModel(
     val id: Int,

@@ -35,8 +35,9 @@ import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.feature.radio.OrderSection
 import kh.com.mereanandroidyoutube.basictoadvance.feature.radio.RadioModel
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 
+@Suppress("ParamsComparedByRef")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenBottomSheet(

@@ -41,7 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

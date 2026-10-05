@@ -1,4 +1,4 @@
-package kh.com.mereanandroidyoutube.model
+package kh.com.exercise.model
 
 sealed interface BaseUiState<out T> {
 
@@ -23,3 +23,4 @@ sealed interface BaseUiState<out T> {
 
     data object Empty : BaseUiState<Nothing>
 }
+

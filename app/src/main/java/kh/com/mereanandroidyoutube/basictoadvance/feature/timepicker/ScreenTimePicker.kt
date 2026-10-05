@@ -41,7 +41,7 @@ import androidx.compose.ui.unit.dp
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Indigo80
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

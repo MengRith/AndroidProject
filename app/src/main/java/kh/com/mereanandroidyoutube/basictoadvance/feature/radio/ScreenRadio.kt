@@ -35,14 +35,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.test.isSelected
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.wear.compose.material3.RadioButton
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.feature.navigationbar.ScreenNavigationBar
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)

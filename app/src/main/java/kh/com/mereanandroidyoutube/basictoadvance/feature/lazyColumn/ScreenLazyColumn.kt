@@ -12,24 +12,22 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.TopAppBar
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
-import kh.com.mereanandroidyoutube.basictoadvance.R
-import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Build
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.MaterialComponentModel
+import kh.com.mereanandroidyoutube.basictoadvance.R
+import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -105,7 +103,7 @@ fun ItemLazyColumn(index: Int, item: String) {
         Spacer(modifier = Modifier.weight(1f))
         Icon(
             modifier = Modifier.padding(end = 16.dp),
-            imageVector = Icons.Filled.Build,
+            painter = painterResource(R.drawable.ic_build),
             contentDescription = ""
         )
     }

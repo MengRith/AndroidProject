@@ -2,20 +2,19 @@ package kh.com.mereanandroidyoutube.basictoadvance.feature.stateviewmodel
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.BasicAlertDialog
+import androidx.compose.material3.Button
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.foundation.layout.Row
-import androidx.compose.material3.Button
-import androidx.compose.material3.FilledTonalButton
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -36,11 +35,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
+import kh.com.exercise.model.general.MaterialComponentModel
+import kh.com.exercise.model.general.UserModel
 import kh.com.mereanandroidyoutube.basictoadvance.R
-import kh.com.mereanandroidyoutube.model.general.UserModel
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -107,7 +106,7 @@ fun ScreenStateViewModel(
         ) {
             items(userList.size) { index ->
                 val user = userList[index]
-                val (firstName, lastName) = user
+                val (userFirstName, userLastName) = user
                 ElevatedCard(
                     modifier = Modifier
                         .fillMaxWidth()
@@ -122,7 +121,7 @@ fun ScreenStateViewModel(
                     Text(
                         modifier = Modifier
                             .padding(8.dp),
-                        text = "$firstName $lastName"
+                        text = "$userFirstName $userLastName"
                     )
                     TextButton(
                         onClick = {
@@ -138,7 +137,7 @@ fun ScreenStateViewModel(
         if (isShowDialog) {
             BasicAlertDialog(
                 onDismissRequest = {
-
+                    isShowDialog = false
                 },
                 modifier = Modifier,
             ) {
@@ -173,7 +172,7 @@ fun ScreenStateViewModel(
                             Text("Last Name")
                         },
                         placeholder = {
-                            Text("Enter Your First Name")
+                            Text("Enter Your Last Name")
                         },
                         value = lastName,
                         onValueChange = { value ->
@@ -221,7 +220,7 @@ fun ScreenStateViewModel(
 @Preview
 @Composable
 fun ScreenStateViewModelPreview() {
-    AppTheme() {
+    AppTheme {
         ScreenStateViewModel(
             item = MaterialComponentModel(
                 1,

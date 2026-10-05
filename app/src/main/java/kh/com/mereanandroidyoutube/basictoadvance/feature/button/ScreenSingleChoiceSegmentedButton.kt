@@ -1,6 +1,5 @@
 package kh.com.mereanandroidyoutube.basictoadvance.feature.button
 
-import android.R.attr.contentDescription
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,9 +10,9 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Text
@@ -28,9 +27,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
+import kh.com.exercise.model.general.MaterialComponentModel
 import kh.com.mereanandroidyoutube.basictoadvance.R
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,9 +38,9 @@ fun SingleChoiceSegmentedButton(
     onBack: () -> Unit
 ){
     var selectedIndex by remember { mutableIntStateOf(0) }
-    var transactionFilter by remember { mutableStateOf<List<TransactionModel>>(transactionList) }
+    var transactionFilter by remember { mutableStateOf(transactionList) }
     
-    val list = listOf<TransactionType>(
+    val list = listOf(
         TransactionType.TRANSFER,
         TransactionType.KHQR,
         TransactionType.MOBILE_TOPUP,
@@ -68,7 +67,7 @@ fun SingleChoiceSegmentedButton(
                     }
                 },
                 title = {
-                    Text("Single Choice Segment")
+                    Text(item.title)
                 }
 
             )
@@ -78,7 +77,7 @@ fun SingleChoiceSegmentedButton(
                 onClick = {
                     transactionFilter = transactionList
                 }
-            ) { Text("Clear")}
+            ) { Text("Clear") }
         }
     ) { innerPadding ->
         Column(
@@ -89,7 +88,7 @@ fun SingleChoiceSegmentedButton(
             SingleChoiceSegmentedButtonRow(
                 modifier = Modifier.padding(16.dp)
             ) { 
-                list.forEachIndexed { index, item ->
+                list.forEachIndexed { index, filterItem ->
                     SegmentedButton(
                         selected = index == selectedIndex,
                         onClick = {
@@ -98,17 +97,17 @@ fun SingleChoiceSegmentedButton(
                         },
                         shape = RoundedCornerShape(
                             topStart = if (index == 0) 16.dp else 0.dp,
-                            topEnd = if (index == list.size - 1) 16.dp else 0.dp,
+                            topEnd = if (index == (list.size - 1)) 16.dp else 0.dp,
                             bottomStart = if (index == 0) 16.dp else 0.dp,
-                            bottomEnd = if (index == list.size - 1) 16.dp else 0.dp
+                            bottomEnd = if (index == (list.size - 1)) 16.dp else 0.dp
                         ),
                         label = {
-                            Text(item.type)
+                            Text(filterItem.type)
                         }
                     )
                 }
             }
-            transactionFilter.forEachIndexed { index, model ->
+            transactionFilter.forEach { model ->
                 Row(
                     modifier = Modifier
                         .height(56.dp)
@@ -127,12 +126,12 @@ fun SingleChoiceSegmentedButton(
 @Composable
 @Preview(showBackground = true)
 fun SingleChoiceSegmentedPreview(){
-    AppTheme() {
+    AppTheme {
         SingleChoiceSegmentedButton(
             item = MaterialComponentModel(
                 1,
-                "Scaffold",
-                "Scaffold description",
+                "Single Choice Segmented Button",
+                "Description",
                 { "" },
                 ""
             ),

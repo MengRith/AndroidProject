@@ -54,8 +54,8 @@ import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.util.LoadingUtil
 import kh.com.mereanandroidyoutube.basictoadvance.util.SystemBarController
-import kh.com.mereanandroidyoutube.model.BaseUiState
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+import kh.com.exercise.model.BaseUiState
+import kh.com.exercise.model.general.MaterialComponentModel
 
 
 @OptIn(ExperimentalMaterial3Api::class)

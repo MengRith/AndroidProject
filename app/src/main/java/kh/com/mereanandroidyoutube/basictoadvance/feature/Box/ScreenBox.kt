@@ -1,6 +1,7 @@
 package kh.com.mereanandroidyoutube.basictoadvance.feature.Box
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -14,24 +15,17 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import kh.com.exercise.model.general.MaterialComponentModel
+import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.R.drawable
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.width
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.unit.dp
-import kh.com.mereanandroidyoutube.basictoadvance.R
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -39,19 +33,17 @@ fun ScreenBox(
     item: MaterialComponentModel,
     onBack: () -> Unit
 ) {
-    var pressed by remember { mutableIntStateOf(0) }
     Scaffold(
         topBar = {
             TopAppBar(
                 navigationIcon = {
                     IconButton(
-                        onClick = {}
+                        onClick = onBack
                     ) {
                         Icon(
                             painter = painterResource(drawable.ic_backarrow),
                             contentDescription = "Back",
                         )
-
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
@@ -62,11 +54,10 @@ fun ScreenBox(
                     Text(
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Center,
-                        text = "Top Box"
+                        text = item.title
                     )
                 },
             )
-
         },
         bottomBar = {
             BottomAppBar(
@@ -81,20 +72,17 @@ fun ScreenBox(
             }
         },
     ) { innerPadding ->
-        Box (
+        Box(
             modifier = Modifier
                 .padding(innerPadding)
                 .fillMaxSize(),
             contentAlignment = Alignment.Center
-
         ) {
             Text(
                 modifier = Modifier
                     .align(Alignment.TopCenter)
-                    .background(
-                        colorResource(R.color.purple_200))
+                    .background(colorResource(R.color.purple_200))
                     .padding(8.dp),
-
                 text = "Top start"
             )
             Text(
@@ -110,16 +98,15 @@ fun ScreenBox(
     }
 }
 
-
 @Composable
 @Preview(showBackground = true)
-fun ScreenBoxPreview(){
-    AppTheme() {
+fun ScreenBoxPreview() {
+    AppTheme {
         ScreenBox(
             item = MaterialComponentModel(
                 1,
-                "Scaffold",
-                "Scaffold description",
+                "Box",
+                "Box description",
                 { "" },
                 ""
             ),

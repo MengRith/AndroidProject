@@ -15,6 +15,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.IconButtonDefaults
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -26,9 +27,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.wear.compose.material3.OutlinedButton
+import kh.com.exercise.model.general.MaterialComponentModel
 import kh.com.mereanandroidyoutube.basictoadvance.R
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Amber40
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Orange80
@@ -37,6 +37,7 @@ import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.RedGrey80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.Yellow80
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.YellowGrey40
 
+@Suppress("ParamsComparedByRef")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun ScreenButton(

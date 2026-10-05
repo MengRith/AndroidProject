@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "127961001711",
+    "project_id": "learnandroid-4a2cd",
+    "storage_bucket": "learnandroid-4a2cd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:127961001711:android:38b5a147a44be3c149751a",
+        "android_client_info": {
+          "package_name": "kh.com.mereanandroidyoutube.basictoadvance"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY0JaWmkYblVW7lYngQEOWJlQ_gNXUUo4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

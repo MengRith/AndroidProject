@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Build
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -25,10 +23,11 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import kh.com.exercise.model.general.MaterialComponentModel
 import kh.com.mereanandroidyoutube.basictoadvance.R
 import kh.com.mereanandroidyoutube.basictoadvance.feature.lazyColumn.ItemLazyColumn
 import kh.com.mereanandroidyoutube.basictoadvance.ui.theme.AppTheme
-import kh.com.mereanandroidyoutube.model.general.MaterialComponentModel
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -107,7 +106,7 @@ fun ItemLazyRow(index: Int, item: String){
         )
         Icon(
             modifier = Modifier.padding(end = 16.dp),
-            imageVector = Icons.Filled.Build,
+            painter = painterResource(R.drawable.ic_build),
             contentDescription = ""
         )
     }

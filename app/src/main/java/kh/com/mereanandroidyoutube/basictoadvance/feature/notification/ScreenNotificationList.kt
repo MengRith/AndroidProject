@@ -28,7 +28,7 @@ fun ScreenNotificationList(
             TopAppBar(
                 navigationIcon = {
                     IconButton(
-                        onClick = onBack
+                        onClick = onBack,
                     ) {
                         Icon(
                             painter = painterResource(R.drawable.ic_backarrow),
